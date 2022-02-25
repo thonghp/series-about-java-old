@@ -9,7 +9,7 @@
 | Day 3: Comment - Error - Naming Convention - Variable - Print | [Link][day3]  |
 | Day 4: Data Type - Scanner - Operator - Type Casting - Math   | [Link][day4]  |
 | Day 5: Control Statement                                      | [Link][day5]  |
-| Day 6: String - Char                                          | [Link][day6]  |
+| Day 6: String                                                 | [Link][day6]  |
 | Day 7: Printf - Format - Method - Overload - Try-Catch        | [Link][day7]  |
 | Day 8: Array                                                  | [Link][day8]  |
 | Day 9: Pass by value - reference                              | [Link][day9]  |
