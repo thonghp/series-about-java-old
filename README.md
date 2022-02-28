@@ -13,7 +13,7 @@
 | Day 7: Printf - Format - Method - Overload - Try-Catch        | [Link][day7]  |
 | Day 8: Array                                                  | [Link][day8]  |
 | Day 9: Pass by value - reference                              | [Link][day9]  |
-| Day 10: Object - Class - Access Modifier                      | [Link][day10] |
+| Day 10: OOP - Object & Class - Access Modifier                | [Link][day10] |
 | Day 11: Constructor - This                                    | [Link][day11] |
 | Day 12: Encapsulation & Inheritance                           | [Link][day12] |
 | Day 13: Abstract & Anonymous                                  | [Link][day13] |
