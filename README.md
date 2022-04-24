@@ -5,7 +5,7 @@
 | Bài viết                                                      | Link          |
 | ------------------------------------------------------------- | ------------- |
 | Day 1: Overview                                               | [Link][day1]  |
-| Day 2: Sai lầm - Viết mã tốt - Lưu trữ trong ram              | [Link][day2]  |
+| Day 2: Sai lầm - Viết mã tốt - Bộ nhớ - Source file           | [Link][day2]  |
 | Day 3: Comment - Error - Naming Convention - Variable - Print | [Link][day3]  |
 | Day 4: Data Type - Scanner - Operator - Type Casting - Math   | [Link][day4]  |
 | Day 5: Control Statement                                      | [Link][day5]  |
