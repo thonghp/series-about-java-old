@@ -9,6 +9,7 @@
   - [3. Datatype](#3-datatype)
     - [3.1 Primitive](#31-primitive)
       - [3.1.1 Integer](#311-integer)
+        - [3.1.1.1 Byte](#3111-byte)
       - [3.1.2 Floating point](#312-floating-point)
       - [3.1.3 Character](#313-character)
       - [3.1.4 Boolean](#314-boolean)
@@ -64,14 +65,33 @@ Quy tắc khi comment
 - Số nguyên có 4 loại: `byte, short, int, long`
   - `int` thường dùng nhất
   - `long` dùng trong dân số thế giới, đường kính hành tinh,...
-  - `byte, short` dùng trong file
+  - , short` dùng trong file
+- Có 3 cách lưu trữ Integer: **decimal(10), octal(8), hexadecimal(16)**
+
+```java
+int decimal = 12;
+int octal = 012;
+int hexa = 0xDeadCafe;
+// hexa ko phân biệt hoa thường
+```
 
 > Trong C/C++ thì size của **int và long phụ thuộc vào nền tảng**, nếu trên máy 16 bit thì nó sẽ có 2 byte và máy 32 bit thì sẽ có 4 byte nhưng trong java thì **không phụ thuộc**, thằng nào cũng như nhau
+
+##### 3.1.1.1 Byte 
+
+- 1 ký tự biểu diễn 1 byte
+- Tiết kiệm bộ nhớ trong array lớn
+- Đọc stream của bit
+- Đọc file 
 
 #### 3.1.2 Floating point
 
 - Dấu phẩy động có 2 loại: `float, double`
 - 3 giá trị đặc biệt `positive infinity, negative infinity, NaN` với `NaN` không phải là **1 số**
+
+```java
+float a = 3.5F; // bắt buộc phải có f hoặc F
+```
 
 > Không thích hợp trong tính toán tài chính vì nó không làm tròn. Vd 2.0 - 1.1 ra 0.8999999... chứ không phải là 0.9 muốn chính xác thì dùng **BigDecimal**
 
@@ -106,5 +126,3 @@ Quy tắc khi comment
 | Luôn gán giá trị                      | Không cần gán giá trị vì mặc định là null |
 | Kích thước phụ thuộc vào kiểu dữ liệu | Có cùng kích thước                        |
 | Không có method                       | Có thể viết method riêng                  |
-
-
