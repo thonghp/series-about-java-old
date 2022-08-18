@@ -1,6 +1,7 @@
 # White Paper - Kiến Trúc - Các Nền Tảng
 
 ## Mục lục nội dung 
+
   - [1. White paper](#1-white-paper)
   - [2. Kiến trúc](#2-kiến-trúc)
   - [3. Các nền tảng](#3-các-nền-tảng)
@@ -47,3 +48,7 @@ Giải thích những lợi ích 1 công nghệ, sản phẩm hay chính sách c
 - `Java Standard Edition - Java SE` **==>** dành cho máy tính để bàn và các ứng dụng máy chủ độc lập, là một nền tảng cơ bản cho phép phát triển giao diện điều khiển, các ứng dụng mạng và các ứng dụng dạng WinForm.
 - `Java Enterprise Edition - Java EE` **==>** Được xây dựng trên nền tảng Java SE, giúp phát triển các ứng dụng web, các ứng dụng ở cấp doanh nghiệp,…
 - `Java Micro Edition - Java ME` **==>** Là một nền tảng cho phép phát triển các ứng dụng nhúng vào các thiết bị điện tử như mobile,…
+
+## Xem thêm bài viết khác
+
+- [Simple Java Program - Comment - Datatype](/Chap1/Day2.md)
