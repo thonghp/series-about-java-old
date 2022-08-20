@@ -8,6 +8,7 @@
     - [3.1 Primitive](#31-primitive)
       - [3.1.1 Integer](#311-integer)
         - [3.1.1.1 Byte](#3111-byte)
+        - [3.1.1.2 Long](#3112-long)
       - [3.1.2 Floating point](#312-floating-point)
       - [3.1.3 Character](#313-character)
       - [3.1.4 Boolean](#314-boolean)
@@ -102,6 +103,12 @@ short myMaxShortValue = Short.MAX_VALUE;
 - Tiết kiệm bộ nhớ trong array lớn
 - Đọc stream của bit
 - Đọc file 
+
+##### 3.1.1.2 Long 
+
+- Từ **java 7** ta có thể sử dụng `_` cho phân tách con số cho dễ nhìn nhưng lưu ý
+  - Không thể sử dụng `_` ở đầu hoặc ở cuối, ở cạnh `.`, cạnh `L,f` và cạnh `0x`
+- Vd `long value = 3_000_000_000L;`
 
 #### 3.1.2 Floating point
 
