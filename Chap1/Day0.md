@@ -1,13 +1,13 @@
-# Overview
+# Structure
 
 ## Các bài viết
 
 | Bài viết                                                              | Link          |
 | --------------------------------------------------------------------- | ------------- |
 | Day 1: White Paper - Kiến Trúc - Các Nền Tảng                         | [Link][day1]  |
-| Day 2: Sai lầm - Viết mã tốt - Bộ nhớ - Source file - JavaBeans       | [Link][day2]  |
-| Day 3: Comment - Error - Naming Convention - Variable - Print         | [Link][day3]  |
-| Day 4: Data Type - Scanner - Operator - Type Casting - Math           | [Link][day4]  |
+| Day 2: Simple Java Program - Comment - Datatype                       | [Link][day2]  |
+| Day 3: Naming Convention - Variable - Constant                        | [Link][day3]  |
+| Day 4: Operator                                                       | [Link][day4]  |
 | Day 5: Control Statement                                              | [Link][day5]  |
 | Day 6: String - Character                                             | [Link][day6]  |
 | Day 7: Printf - Format - Method - Overload - Try-Catch                | [Link][day7]  |
@@ -29,14 +29,14 @@
 | Day 23: Lambda                                                        | [Link][day23] |
 
 [day1]: Day1.md
-[day2]: Day002.md
-[day3]: Day003.md
-[day4]: Day004.md
-[day5]: Day005.md
-[day6]: Day006.md
-[day7]: Day007.md
-[day8]: Day008.md
-[day9]: Day009.md
+[day2]: Day2.md
+[day3]: Day3.md
+[day4]: Day4.md
+[day5]: Day5.md
+[day6]: Day6.md
+[day7]: Day7.md
+[day8]: Day8.md
+[day9]: Day9.md
 [day10]: Day010.md
 [day11]: Day011.md
 [day12]: Day012.md
