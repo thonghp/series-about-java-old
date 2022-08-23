@@ -137,4 +137,4 @@ public class Constants {
 ## Xem thêm bài viết khác
 
 - [Simple Java Program - Comment - Datatype](/Chap1/Day2.md)
-- [Operator](/Chap1/Day4.md)
+- [Operator - Math - Type Conversion](/Chap1/Day4.md)
