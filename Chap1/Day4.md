@@ -16,6 +16,7 @@
     - [1.7 Bitwise](#17-bitwise)
     - [1.8 Shift](#18-shift)
     - [1.9 Instance of](#19-instance-of)
+    - [1.10 Sự khác nhau giữa logical và bitwise ](#110-sự-khác-nhau-giữa-logical-và-bitwise)
   - [2. Một vài Math class thường dùng](#2-một-vài-math-class-thường-dùng)
   - [3. Type conversion](#3-type-conversion)
 
@@ -96,6 +97,8 @@ System.out.println(++a); // 6
 System.out.println(a); // 6
 System.out.println(b++); // 6
 System.out.println(b); // 7
+System.out.println(+b); // 7
+System.out.println(-b); // -7
 ```
 
 > **++** áp dụng với **char** sẽ ra ký tự tiếp theo
@@ -104,13 +107,22 @@ System.out.println(b); // 7
 
 - Toán tử Assignment gồm `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `^=`, `|=`, `<<=`, `>>=`, `>>>=` 
 
+> Nó sẽ tự động cast cho phù hợp với kiểu dữ liệu
+
+```java
+int result = 1 + 3.5; // compile phải (int)(1 + 3.5)
+int result = 1;
+result += 3.5; // 4.0 nó sẽ tự động hiểu (int)(1 + 3.5)
+```
 ### 1.4 Relational 
 
 - Toán tử Relational gồm `==`, `!=`, `<`, `<=`, `>`, `>=`
 
 ### 1.5 Logical 
 
-- Toán tử Logical gồm `&&`, `||`, `^`
+Toán tử Logical gồm `&&`, `||`
+
+> **short-circuiting ==>** kiểm tra bên trái toán tử đúng mới kiểm tra bên phải 
 
 ### 1.6 Ternary
 
@@ -124,7 +136,28 @@ System.out.println(x > 4 ? 99.99 : 9); // 9.0
 
 ### 1.7 Bitwise
 
-- Toán tử Bitwise gồm `&`, `|`, `^`
+Toán tử Bitwise gồm `&`, `|`, `^`, `-` và làm việc dựa trên `bit`
+
+- `&` => and 
+  - `1 & 0 => 0`
+  - `0 & 1 => 0`
+  - `1 & 1 => 1`
+  - `0 & 0 => 0`
+
+```java
+System.out.println(10 & 12); // 8
+/*
+ * 10 => 1010
+ * 12 => 1100
+ *       1000 => 8
+ */
+```
+
+- `|` => or 
+- `^` => xor 
+- `-` => not 
+
+> Kiểm tra cả 2 bên toán tử
 
 ### 1.8 Shift
 
@@ -141,12 +174,6 @@ System.out.println(~10); // -11
 System.out.println(~(-10)); // 9
 ```
 
-
-
-
-
-> 
->
 > `==` được sử dụng để so sánh giá trị trong primitive và so sánh cùng reference đối với object
 
 **instance of** dùng để kiểm tra xem **object** có phải là **instance** của **class, subclass(extends) hay class implement interface**
@@ -166,6 +193,26 @@ if (name instanceof Object) {
 if (name instanceof CharSequence) {
     System.out.println("an instance of CharSequence interface");
 }
+```
+
+### 1.10 Sự khác nhau giữa logical và bitwise
+
+Logical sẽ chỉ **kiểm tra bên trái** trừ khi true mới sang bên phải còn bitwise sẽ **kiểm tra cả 2 bên**
+
+```java
+int x = 1;
+System.out.println((x != 0) & (1 / x) > 1); // false
+System.out.println((x != 0) && (1 / x) > 1); // false
+
+int x = 0;
+System.out.println((x != 0) & (1 / x) > 1); // runtime
+System.out.println((x != 0) && (1 / x) > 1); // false
+/*
+ * thứ 1 lỗi runtime là do 1/0 không được dẫn đến lỗi
+ * thứ 2 logical thì nó sẽ check bên trái mà x = 0 => false
+ *       còn bitwise check cả 2 nên bên phải cũng check dẫn 
+ *       đến 1 / 0 gây ra lỗi runtime 
+ */
 ```
 
 ## 2. Một vài Math class thường dùng
