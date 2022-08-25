@@ -16,7 +16,8 @@
     - [1.7 Bitwise](#17-bitwise)
     - [1.8 Shift](#18-shift)
     - [1.9 Instance of](#19-instance-of)
-    - [1.10 Sự khác nhau giữa logical và bitwise ](#110-sự-khác-nhau-giữa-logical-và-bitwise)
+    - [1.10 Sự khác nhau giữa logical và bitwise](#110-sự-khác-nhau-giữa-logical-và-bitwise)
+    - [1.11 Thứ tự ưu tiên trong operator](#111-thứ-tự-ưu-tiên-trong-operator)
   - [2. Một vài Math class thường dùng](#2-một-vài-math-class-thường-dùng)
   - [3. Type conversion](#3-type-conversion)
 
@@ -235,6 +236,10 @@ if(++a==10 & ++a==12) {}
 System.out.println(a); // 12
 ```
 
+### 1.11 Thứ tự ưu tiên trong operator
+
+![operator precedence](/assets/operator-precedence.png)
+
 ## 2. Một vài Math class thường dùng
 
 - Các phương thức trong lớp Math là static method
@@ -283,3 +288,4 @@ System.out.println(typeCastInt); // 3
 ## Xem thêm bài viết khác
 
 - [Naming Convention - Variable - Constant](/Chap1/Day3.md)
+- [String](/Chap1/Day5.md)
