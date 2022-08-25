@@ -213,6 +213,26 @@ System.out.println((x != 0) && (1 / x) > 1); // false
  *       còn bitwise check cả 2 nên bên phải cũng check dẫn 
  *       đến 1 / 0 gây ra lỗi runtime 
  */
+
+String str = null;
+if (str != null && !str.equals("")) {}  // không thực thi
+// runtime null không thể sử dụng equals
+if (str != null & !str.equals("")) {}  
+
+boolean a = true;
+boolean b = false;
+boolean c = false;
+
+// (((c || b) && b) || a)
+boolean result1 = a || b && c||b; // true 
+// ((a | b) && (c || b))
+boolean result2 = a  | b && c||b; // false 
+
+int a = 10;
+if(++a==10 && ++a==12) {}
+System.out.println(a); // 11
+if(++a==10 & ++a==12) {} 
+System.out.println(a); // 12
 ```
 
 ## 2. Một vài Math class thường dùng
