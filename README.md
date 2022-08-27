@@ -1,5 +1,7 @@
 # SERIES ABOUT JAVA
 
+Series độc quyền về các chủ đề liên quan tới java
+
 ## Các bài viết
 
 | Bài viết                                  | Link           |
@@ -12,7 +14,7 @@
 | Chapter 6: Generic                        | [Link][chap6]  |
 | Chapter 7: Collections                    | [Link][chap7]  |
 | Chapter 8: Structure                      | [Link][chap8]  |
-| Chapter 9: Graphical User Interface       | [Link][chap9] |
+| Chapter 9: Graphical User Interface       | [Link][chap9]  |
 | Chapter 10: User Interface Component      | [Link][chap10] |
 | Chapter 11: Concurrency                   | [Link][chap11] |
 
