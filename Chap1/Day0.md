@@ -8,7 +8,7 @@
 | Day 2: Simple Java Program - Comment - Datatype                       | [Link][day2]  |
 | Day 3: Naming Convention - Variable - Constant                        | [Link][day3]  |
 | Day 4: Operator - Math - Type Conversion                              | [Link][day4]  |
-| Day 5: Control Statement                                              | [Link][day5]  |
+| Day 5: String - Character                                             | [Link][day5]  |
 | Day 6: String - Character                                             | [Link][day6]  |
 | Day 7: Printf - Format - Method - Overload - Try-Catch                | [Link][day7]  |
 | Day 8: Array                                                          | [Link][day8]  |

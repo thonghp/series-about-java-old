@@ -288,4 +288,4 @@ System.out.println(typeCastInt); // 3
 ## Xem thêm bài viết khác
 
 - [Naming Convention - Variable - Constant](/Chap1/Day3.md)
-- [String](/Chap1/Day5.md)
+- [String - Character](/Chap1/Day5.md)
