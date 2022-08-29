@@ -34,6 +34,8 @@
 - `constant` nên viết hoa hết, phân cách giữa các cụm từ bằng `_` và bắt đầu có `final` ở trước. **==>** **Vd: MAX_SPEED**
 - `package` nên viết thường hết, bắt đầu bằng `domain.organization.name` **==>** **Vd: edu.nlu.exercise**
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ## 2. Variable 
 
 - Là **1 vùng ram** được đặt tên **chiếm số byte** nhất định tuỳ vào data type
@@ -119,6 +121,8 @@ class MyClass {
 public static void main(String[] args) {} // args là tham số
 ```
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ## 3. Constant
 
 - Keyword `final` biểu thị là 1 constant
@@ -133,6 +137,8 @@ public class Constants {
   }
 }
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## Xem thêm bài viết khác
 

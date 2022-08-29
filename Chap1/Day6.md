@@ -48,6 +48,8 @@ System.out.println("name is " + name + " age is age + " favorite is " + favorite
 - syntax: `boolean check = scanner.hasNextInt();`
 - lưu ý nếu `scanner.close()` được gọi thì sau hàm này scanner sẽ không sử dụng được
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ## 2. printf() và format()
 
 - Về cơ bản cả printf() và String.format() đều định dạng chung kiểu chỉ khác ở chổ là printf() sẽ format xong **in ra luôn** còn String.format() sẽ chỉ format thành **String**.
@@ -112,6 +114,8 @@ System.out.println("precision used " + String.format("%.2f", d)); // 11.20
 ```java
 System.out.printf("tạo format dạng percent => %.2f%%", 75.22); // 75.22%
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## Xem thêm bài viết khác
 

@@ -240,6 +240,8 @@ System.out.println(a); // 12
 
 ![operator precedence](/assets/operator-precedence.png)
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ## 2. Một vài Math class thường dùng
 
 - Các phương thức trong lớp Math là static method
@@ -261,6 +263,8 @@ System.out.println(Math.pow(2,3)); // 8.0
 System.out.println(Math.random()); // return 0.0 < x < 1.0
 System.out.println((int) (Math.random() * 2)); // return giá trị từ 0 <= value < 2 
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## 3. Type conversion
 
@@ -284,6 +288,8 @@ double typeDouble = 3.5;
 int typeCastInt = (int) typeDouble;
 System.out.println(typeCastInt); // 3
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## Xem thêm bài viết khác
 

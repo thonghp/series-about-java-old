@@ -37,6 +37,8 @@
 
 > Các thao tác với method của `String` khi String gán = null sẽ gây ra lỗi runtime.
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ## 2. Syntax
 
 ```java 
@@ -50,6 +52,8 @@ String newKeyword = new String("hello");
 ```
 
 > Khi ta không muốn lưu giá trị gì cả nên trỏ String về null
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## 3. Method 
 
@@ -365,6 +369,8 @@ String repeated = "Java".repeat(3); // JavaJavaJava
 - Một chuỗi gọi là empty khi nó `str.equals("")` ra true hay `str.length()==0`
 - Kiểm tra chuỗi không trống và khác null thì điều kiện khác null phải viết trước 
   - `if (str != null && str.length() != 0)`
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**  
   
 ## 4. Character 
 
@@ -379,6 +385,8 @@ System.out.println("character is new line ? " + Character.isWhitespace('\n'));
 System.out.println("character is upperCase ? " + Character.isUpperCase(letter)+ " => convert lowerCase to upperCase " + Character.toUpperCase(letter));
 System.out.println("character is lowerCase ? " + Character.isLowerCase(letter));
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## Xem thêm bài viết khác
 

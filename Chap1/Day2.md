@@ -33,6 +33,8 @@ public class DemoJavaProgram {
 - Phương thức `main` để thực thi chương trình
 - `System.out.println` ==> gọi method `println` của object `System.out` và in ra màn hình console
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ## 2. Comment
 
 - `\\` comment với nội dung ngắn và chỉ trên 1 dòng.
@@ -45,6 +47,8 @@ Quy tắc khi comment
 - Rule 2: comment phải giải thích code đang làm gì
 - Rule 3: comment đường dẫn copy code trên mạng
 - Rule 4: comment sau khi fix bug lại
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## 3. Datatype
 
@@ -152,6 +156,8 @@ float a = 3.5F; // bắt buộc phải có f hoặc F
 | Luôn gán giá trị                      | Không cần gán giá trị vì mặc định là null |
 | Kích thước phụ thuộc vào kiểu dữ liệu | Có cùng kích thước                        |
 | Không có method                       | Có thể viết method riêng                  |
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## Xem thêm bài viết khác
 
