@@ -383,5 +383,5 @@ System.out.println("character is lowerCase ? " + Character.isLowerCase(letter));
 ## Xem thêm bài viết khác
 
 - [Operator - Math - Type Conversion](/Chap1/Day4.md)
-- [Input](/Chap1/Day6.md)
+- [Scanner Input - Format](/Chap1/Day6.md)
 
