@@ -18,6 +18,7 @@
   - [1.9 Instance of](#19-instance-of)
   - [1.10 Sự khác nhau giữa logical và bitwise](#110-sự-khác-nhau-giữa-logical-và-bitwise)
   - [1.11 Thứ tự ưu tiên trong operator](#111-thứ-tự-ưu-tiên-trong-operator)
+  - [1.12 Arithmetic promotion](#112-arithmetic-promotion)
 - [2. Một vài Math class thường dùng](#2-một-vài-math-class-thường-dùng)
 - [3. Type conversion](#3-type-conversion)
 
