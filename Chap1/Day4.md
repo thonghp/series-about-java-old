@@ -97,7 +97,7 @@ result *= 5; // 94
 
 ### 1.2 Unary
 
-- Toán tử Unary gồm `++`, `--`, `!`, `+`, `-`, `~`
+- Toán tử Unary gồm **`++`, `--`, `+`, `-`, `~`**
 
 ```java
 int a = 5, b = 6;
@@ -113,9 +113,9 @@ System.out.println(-b); // -7
 
 ### 1.3 Assignment
 
-- Toán tử Assignment gồm `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `^=`, `|=`, `<<=`, `>>=`, `>>>=`
+- Toán tử Assignment gồm **`=`, `+=`, `-=`, `*=`, `/=`, `%=`, `&=`, `|=`, `^=`, `<<=`, `>>=`, `>>>=`**
 
-> Nó sẽ tự động cast cho phù hợp với kiểu dữ liệu
+**Vd**
 
 ```java
 int result = 1 + 3.5; // compile phải (int)(1 + 3.5)
@@ -123,15 +123,17 @@ int result = 1;
 result += 3.5; // 4.0 nó sẽ tự động hiểu (int)(1 + 3.5)
 ```
 
+> Nó sẽ tự động cast cho phù hợp với kiểu dữ liệu
+
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 1.4 Relational
 
-- Toán tử Relational gồm `==`, `!=`, `<`, `<=`, `>`, `>=`
+- Toán tử Relational gồm **`==`, `!=`, `<`, `<=`, `>`, `>=`**
 
 ### 1.5 Logical
 
-Toán tử Logical gồm `&&`, `||`
+Toán tử Logical gồm **`&&`, `||`, `!`**
 
 ```java
 int i =5, j = 10, k = 15;
@@ -144,6 +146,8 @@ if ((i < j) || ( k++ > j)) {
 if ((i < j) && ( k++ < j)) {
   System.out.println("k: " + k); // 16
 }
+
+boolean result = !true; // false
 ```
 
 > **short-circuiting ==>** kiểm tra bên trái toán tử đúng mới kiểm tra bên phải
@@ -152,7 +156,7 @@ if ((i < j) && ( k++ < j)) {
 
 ### 1.6 Ternary
 
-- Toán tử Ternary gồm `? :`
+- Toán tử Ternary gồm **`? :`**
 
 ```java
 // ưu tiên kiểu nào lớn hơn
@@ -179,7 +183,7 @@ Toán tử Bitwise gồm **`&`, `|`, `^`, `~`, `!`** và làm việc dựa trên
   - **`0 ^ 1 => 1`**
   - **`1 ^ 0 => 1`**
   - **`1 ^ 1 => 0`**
-- `~` => inversion, đảo ngược bit
+- **`~`** => inversion, đảo ngược bit
   - **`~ 0101 => 1010`**
 - **`!`** => sử dụng trên boolean 
   - **`boolean a = true, b = !a; // fasle `**
@@ -195,44 +199,62 @@ System.out.println(10 & 12); // 8
  */
 ```
 
-> Kiểm tra cả 2 bên toán tử
+> - Kiểm tra cả 2 bên toán tử
+> - false = 0, true = 1
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 1.8 Shift
 
-- Toán tử Shift gồm `<<`, `>>`, `>>>`
+- Toán tử Shift gồm **`<<`, `>>`, `>>>`**
+- Sử dụng để dịch chuyển các **bit** của toán hạng đầu tiên sang phải hoặc trái 
+- Áp dụng với **`int, long, short, byte, char`**
+
+**Vd**
+
+```java
+/*
+ * 13 -> 00000000 00000000 00000000 00001101
+ * << 2  00000000 00000000 00000000 00110100
+ */
+int result = 13 << 2; // 52
+/*
+ * 13 -> 00000000 00000000 00000000 00001101
+ * >> 2  00000000 00000000 00000000 00000011
+ */
+int result = 13 >> 2; // 3
+
+/*
+ * -1 -> 11111111 11111111 11111111 11111111
+ * <<2   11111111 11111111 11111111 11111100 
+ * >>2   11111111 11111111 11111111 11111111 
+ * >>>2  11111111 11111111 11111111 111111 
+ */
+int result = -1 << 2; 
+result = result >> 2;
+result = result >>> 2;
+```
+
+> Đối với toán tử **>>>** không thể lấy lại các bit bị mất
 
 ### 1.9 Instance of
 
 - Toán tử Type Comparison gồm `instance of`
-
-```Java
-int a = 5, b = 6, c = 12;
-System.out.println((a > 4) ^ (b > 5)); // false, khác với || là 1 cái true nhưng không phải cả 2
-System.out.println(~10); // -11
-System.out.println(~(-10)); // 9
-```
-
-> `==` được sử dụng để so sánh giá trị trong primitive và so sánh cùng reference đối với object
-
-**instance of** dùng để kiểm tra xem **object** có phải là **instance** của **class, subclass(extends) hay class implement interface**
+- **instance of** dùng để kiểm tra xem **object** có phải là **instance** của **class, subclass(extends) hay class implement interface**
+- Kiểm tra runtime
 
 ```java
-String name = "Java";
-if (name instanceof String) {
-    System.out.println("an instance of String class");
-}
+interface  X{}
+class A  implements X {}
+class B extends A {}
+A a = new A();
+B b = new B();
 
-// test for extends object
-if (name instanceof Object) {
-    System.out.println("an instance of Object class");
-}
-
-// test for implement interface charsequence
-if (name instanceof CharSequence) {
-    System.out.println("an instance of CharSequence interface");
-}
+if (b instanceof X) // true
+if (b instanceof B) // true
+if (b instanceof A) // true
+if (a instanceof A) // true
+if (a instanceof X) // true
 ```
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
@@ -281,6 +303,24 @@ System.out.println(a); // 12
 
 ![operator precedence](/assets/operator-precedence.png)
 
+### 1.12 Arithmetic promotion
+
+- Thăng hạng toán tử là trình biên dịch sẽ convert type thành type khác
+- Áp dụng cho biểu thức 2 toán tử 
+  - Nếu 2 toán tử có type là `byte, short, char` => promotion lên `int`
+  - 1 trong 2 toán tử có cái lớn hơn thì ưu tiên cái lớn hơn  
+
+```java
+byte b = 5;
+int i = 3;
+// lúc này b sẽ được compiler tự động promotion lên int
+double d =  b / i; // 1.0
+
+int a = 3, b = 2;
+(a * b) / b == a; // true
+(a / b) * b == a; // false
+```
+
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## 2. Một vài Math class thường dùng
@@ -313,6 +353,11 @@ System.out.println((int) (Math.random() * 2)); // return giá trị từ 0 <= va
 - Với mũi tên liền thì độ chính xác giữ nguyên còn với mũi tên không liền thì bị mất độ chính xác
 
 ![type conversion](/assets/convertion-datatype.png)
+
+```java
+int a = 123456789;
+float b = a; // 1.23456792E8
+```
 
 - Wide được ép một cách tự động do chuyển từ loại nhỏ sang loại có kích thước lớn.
 
