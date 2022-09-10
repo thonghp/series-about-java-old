@@ -19,11 +19,12 @@
 - [4 jump statement](#4-jump-statement)
   - [4.1 break](#41-break)
   - [4.2 continue](#42-continue)
-  - [4.3 label break](#43-label-break)
 
 ## 1. Conditional statement
 
 ### 1.1 if
+
+- Câu lệnh sẽ **được thực thi** khi điều kiện `true`
 
 **Syntax:**
 
@@ -43,6 +44,8 @@ if (isValue) { // isValue = true
 ```
 
 ### 1.2 if - else
+
+- Câu lệnh `if` sẽ **được thực thi** khi điều kiện `true` và `else` sẽ được thực thi khi điều kiện `false`
 
 **Syntax:**
 
@@ -72,7 +75,13 @@ if (isValue = true) {
 System.out.println(isValue); // true không còn là false
 ```
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 1.3 if - else - if
+
+- Câu lệnh `if` sẽ **được thực thi** khi điều kiện `true`, nếu **không thỏa** thì câu lệnh `else if` sẽ được thực hiện kế tiếp **nếu thỏa** và `else` sẽ là câu lệnh cuối cùng nếu **không có điều kiện nào ở trên thỏa**
+
+**Syntax**
 
 ```java
 if (condition1) {
@@ -85,6 +94,8 @@ if (condition1) {
 ```
 
 ### 1.4 nested if
+
+**Syntax**
 
 ```java
 if (condition1) {
@@ -106,20 +117,25 @@ if (condition1) {
 **Syntax**
 
 ```java
-while (condition) statement
+while (expression) statement(s)
 ```
+
+- Các bước thực hiện
+  - expression = true => thực thi statement
+  - thực thi statement => check lại expression
 
 - Vd về sử dụng `while`
 
 ```java
 int i = 0;
 while (i < 5) {
-  System.out.println(i);
+  System.out.println(i); // 0 1 2 3 4
   i++; // để tránh loop vô hạn
 }
+System.out.println(i); // 5
 ```
 
-> Sử dụng **while(true)** cho trường hợp điều kiện chưa biết trước.
+> Sử dụng **while(true) - vòng lặp vô hạn** cho trường hợp điều kiện chưa biết trước.
 
 ### 2.2 do - while
 
@@ -129,9 +145,11 @@ while (i < 5) {
 **Syntax**
 
 ```java
-do statement while (condition);
+do { statement(s) } while (expression);
 ```
 
+- Các bước thực hiện
+  - thực thi statement => check expression
 - Vd về sử dụng `do-while`
 
 ```java
@@ -142,11 +160,42 @@ do {
   i++;
 }
 while (i > 2);
+
+int i = 1;
+do {
+    System.out.println(i); // 1 2 3 4
+    i++;
+}
+while (i < 5);
+
+int i;
+do {
+    i = 1;
+    System.out.println(i); // vòng lặp vô hạn 1
+    i++;
+}
+while (i < 5);
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 2.3 for
 
-Sử dụng khi số lần lặp xác định
+- Sử dụng khi số lần lặp xác định
+
+**Syntax**
+
+```java
+for (initialization; termination; increment) {
+    statement(s)
+}
+```
+
+- Các bước thực hiện
+  - initialization thực thi đầu tiên và thực thi 1 lần
+  - initialization so đk với termination => true
+  - thực thi statement => increment => check termination
+- Vd về sử dụng for
 
 ```java
 for (int i = 0; i < 5; i++) {
@@ -161,7 +210,7 @@ System.out.println(i); // 5
 
 ### 2.4 for - each
 
-Được sử dụng để lặp qua các element trong array 1 chiều, xem đầy đủ ở phần array.
+Được thế kế để lặp qua array và collection
 
 ```java
 for(data_type variable : array) {
@@ -221,7 +270,7 @@ switch (switchTest + 1 + 1) {
 } // return bang 12
 ```
 
-- Nhiều trường hợp
+**Nhiều trường hợp**
 
 ```java
 switch (itemCode) { // expression
@@ -238,6 +287,30 @@ switch (itemCode) { // expression
         ...
 }
 ```
+
+**Note**
+
+- Quên sử dụng break thì câu lệnh sẽ thực thi từ điều kiện thỏa **cho đến khi** gặp break
+
+```java
+int number = 2;
+switch (number) {
+    case 1:
+        System.out.println("1");
+    case 2:
+        System.out.println("2");
+    case 3:
+        System.out.println("3");
+    case 4:
+        System.out.println("4");
+    default:
+        System.out.println("5");
+        break;
+}
+// in ra màn hình 2 3 4 5
+```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 3.2 switch nâng cao
 
@@ -287,20 +360,46 @@ switch (itemCode) {
 
 ### 4.1 break
 
-**Dừng thực thi ngay lập tức** tại nơi thỏa điều kiện không quan tâm vòng lặp, sử dụng trong `switch`, `for loop` và `while-loop`
+**Unlabled**
+
+- **Dừng thực thi ngay lập tức** thoát khỏi vòng lặp hiện tại chuyển đến câu lệnh tiếp theo, sử dụng trong `switch` và **loop** 
 
 ```java
-for (int i = 0; i < 10; i++) {
-  if (i == 4) {
-    break;
-  }
-  System.out.println(i); // 0,1,2,3
+// sử dụng in bên trong một loop lồng thì phải khởi tạo giá trị 
+int out, in = 0;
+for (out = 0; out < 10; out++) {
+    for (in = 0; in < 20; in++) {
+        if (in > 10) break;
+    }
+    // 0 -> 9 - 11
+    System.out.println("inside out = " + out + ", in = " + in); 
 }
+// 10 - 11
+System.out.println("out = " + out + ", in = " + in);
+```
+
+**Labeled**
+
+- Kết thúc một câu lệnh bên ngoài xác định bởi nhãn
+
+```java
+int out, in = 0;
+outer:
+for (out = 0; out < 10; out++) {
+    for (in = 0; in < 20; in++) {
+        if (in > 10) break outer;
+    }
+    System.out.println("inside out = " + out + ", in = " + in);
+}
+// chỉ in câu này 0 - 11
+System.out.println("outer out = " + out + ", in = " + in);
 ```
 
 ### 4.2 continue
 
-**Bỏ qua điều kiện thỏa** và chạy cho đến khi hết vòng lặp, sử dụng trong `for loop` và `while loop`
+**Unlabled**
+
+- **Bỏ qua điều kiện thỏa** và chạy cho đến khi hết vòng lặp, sử dụng trong `for loop` và `while loop`
 
 ```java
 for (int i = 0; i < 10; i++) {
@@ -311,7 +410,20 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-### 4.3 label break 
+**Labeled**
+
+```java
+int out, in = 0;
+test:
+for (out = 0; out < 10; out++) {
+    for (in = 0; in < 20; in++) {
+        if (in > 10) continue test;
+    }
+    System.out.println("inside out = " + out + ", in = " + in);
+}
+// 10 - 11
+System.out.println("outer out = " + out + ", in = " + in);
+```
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
