@@ -19,6 +19,7 @@
 - [4 jump statement](#4-jump-statement)
   - [4.1 break](#41-break)
   - [4.2 continue](#42-continue)
+  - [4.3 return](#43-return)
 
 ## 1. Conditional statement
 
@@ -425,6 +426,29 @@ for (out = 0; out < 10; out++) {
 System.out.println("outer out = " + out + ", in = " + in);
 ```
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
+### 4.3 return 
+
+- Câu lệnh **`return`** có 2 dạng: một là **return value** hay là **`return`**
+
+```java
+public int getAge() {
+  return 22;
+}
+
+public void displayDayOfWeek(int day) {
+	if (day == 1) {
+		System.out.println("Sunday");
+		return;
+	} 
+	if (day == 2){
+		System.out.println("Monday");
+		return;
+	} 
+}	
+```
+  
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## Xem thêm bài viết khác
