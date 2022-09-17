@@ -20,6 +20,10 @@
 ```java
 package com.edu.demo
 public class DemoJavaProgram {
+/*
+ * public static void main(String... args) { cũng hợp lệ
+ * static public void main(String[] args) cũng hợp lệ
+ */
     public static void main(String[] args) {
         System.out.println("Hello World");
     }
