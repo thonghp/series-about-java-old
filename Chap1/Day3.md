@@ -40,17 +40,26 @@
 
 - Là **1 vùng ram** được đặt tên **chiếm số byte** nhất định tuỳ vào data type
 - Cấu tạo từ **data type và name**
-- Có 3 loại biến là **local, instance, static**
-- **non-static field và static field** thuộc về khai báo trong **object**.
-- Sử dụng **final** để chỉ định biến hằng chống gán lại giá trị
+- Các loại biến: 
+  - [Instance variable](#23-instance-variable) (non-static field)
+  - [Class variable](#22-static-variable) (static field)
+  - [Local variable]((#24-local-variable))
+  - [Parameter]((#25-parameter))
 
 ```java
-// declare
-double salary, height;
+public class Employee {
+  /*
+   * phạm vi này được gọi là field
+   * field có thể là class/member variable
+   */
+  private static int age = 22;
+  private double salary;
 
-// initialize (phải khởi tạo giá trị trước khi sử dụng)
-salary = 3.5;
-int age = 22;
+  public double totalSalary(double salary) {
+    int day = 31; // local variable không phải là field
+    ...
+  }
+}
 
 // java 10
 var salary = 3.5; // double
@@ -64,7 +73,8 @@ var age = 22; // int
 ### 2.2 Static variable
 
 - Còn gọi là **class variable, static field**
-- Khai báo từ khoá static khi sử dụng
+- Bất kỳ field nào khai báo với **`static modifier`**
+- **Chỉ có một bản sao** của biến tồn tại dù khởi tạo bao nhiêu lần và sẽ **nhận giá trị sau cùng**
 
 ```java
 class MyClass {
@@ -89,8 +99,12 @@ class MyClass {
 ### 2.3 Instance variable
 
 - Còn gọi là **Non-Static Field, Member variable**
+- Object lưu trữ state trong **non-static field** => được khai báo mà không có từ khóa **`static`** 
 - Khai báo trong 1 lớp ngoài method và chỉ được **khởi tạo khi lớp khởi tạo**
 - Không cần khởi tạo giá trị vì đã **có giá trị default**
+- Phía trước biến 
+  - Có thể sử dụng 4 **access modifier, `final, transient`**
+  - Không thể sử dụng **`abstract, synchronized, strictfp, native, static`** (vì lúc này là static variable)
 
 ```java
 class MyClass {
@@ -101,9 +115,9 @@ class MyClass {
 ### 2.4 Local variable
 
 - Biến nằm trong method và scope cũng chỉ ở trong method
-- Phải khởi tạo giá trị trước khi sử dụng
+- Phải **khởi tạo giá trị** trước khi sử dụng
 - Nằm trong **stack không phải heap**
-- Nếu biến **instance cùng tên với local** thì trong **method biến local sẽ ưu tiên hơn**
+- Phía trước biến chỉ có thể là **`final`** 
 
 ```java
 class MyClass {
@@ -112,6 +126,8 @@ class MyClass {
   }
 }
 ```
+
+> Nếu biến **instance cùng tên với local** thì trong **method biến local sẽ ưu tiên hơn**
 
 ### 2.5 Parameter
 
