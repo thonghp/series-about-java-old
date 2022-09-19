@@ -8,7 +8,9 @@
     - [3.1 Primitive](#31-primitive)
       - [3.1.1 Integer](#311-integer)
         - [3.1.1.1 Byte](#3111-byte)
-        - [3.1.1.2 Long](#3112-long)
+        - [3.1.1.2 Short](#3112-short)
+        - [3.1.1.3 Int](#3113-int)
+        - [3.1.1.4 Long](#3114-long)
       - [3.1.2 Floating point](#312-floating-point)
       - [3.1.3 Character](#313-character)
       - [3.1.4 Boolean](#314-boolean)
@@ -30,20 +32,18 @@ public class DemoJavaProgram {
 }
 ```
 
-- Java rất phân biệt rõ ràng chữ hoa và chữ thường **- case sensitive**
-- `public` là access modifier
-- Mọi thứ trong chương trình java đều phải nằm trong `class`
-- Không thể **đảo thứ tự** `public` với `class`
-- Phương thức `main` để thực thi chương trình
-- `System.out.println` ==> gọi method `println` của object `System.out` và in ra màn hình console
-
-**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+- Java thì **case sensitive** ==> phân biệt chữ hoa chữ thường
+- **`public`** là access modifier
+- Mọi thứ trong chương trình java đều phải nằm trong **`class`**
+- Không thể **đảo thứ tự** **`public`** với **`class`**
+- Phương thức **`main`** để thực thi chương trình
+- **`System.out.println`** ==> gọi method **`println`** của object **`System.out`** và in ra màn hình console
 
 ## 2. Comment
 
-- `\\` comment với nội dung ngắn và chỉ trên 1 dòng.
-- `/* */` comment khối với nội dung mô tả nhiều.
-- `/** */` comment dành cho document (thường là document API)
+- **`\\`** comment với nội dung ngắn và chỉ trên 1 dòng.
+- **`/* */`** comment khối với nội dung mô tả nhiều.
+- **`/** */`** comment dành cho document (thường là document API)
 
 Quy tắc khi comment
 
@@ -63,16 +63,18 @@ Quy tắc khi comment
 - Còn gọi là **kiểu dữ liệu nguyên thuỷ**
 - Có 8 primitive data types chia thành các loại **Integer, floating-point, character, boolean**
 - **Signed - có dấu** chứa 1 nửa âm nửa dương, **Unsigned - không dấu** chỉ chứa dương
-- Java chỉ hổ trợ **Signed** trừ `char` có **Unsigned**
+- Java chỉ hổ trợ **Signed** trừ **`char`** có **Unsigned**
 
 ![alt text](/assets/day-02-primitive-data-type.jpg)
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 #### 3.1.1 Integer
 
-- Số nguyên có 4 loại: `byte, short, int, long`
-  - `int` thường dùng nhất
-  - `long` dùng trong dân số thế giới, đường kính hành tinh,...
-  - `byte, short` dùng trong file
+- Số nguyên có 4 loại: **`byte, short, int, long`**
+  - **`int`** thường dùng nhất
+  - **`long`** dùng trong dân số thế giới, đường kính hành tinh,...
+  - **`byte, short`** dùng trong file
 - Có 3 cách lưu trữ Integer: **decimal(10), octal(8), hexadecimal(16)**
 
 ```java
@@ -105,6 +107,8 @@ short myMaxShortValue = Short.MAX_VALUE;
 
 > Nếu **max + 1** và **min - 1** ở trường hợp int và long sẽ **đổi miền** còn byte với short thì sẽ tự động ép sang kiểu int nên không vượt quá miền do ép sang kiểu int
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ##### 3.1.1.1 Byte 
 
 - 1 ký tự biểu diễn 1 byte
@@ -112,16 +116,27 @@ short myMaxShortValue = Short.MAX_VALUE;
 - Đọc stream của bit
 - Đọc file 
 
-##### 3.1.1.2 Long 
+##### 3.1.1.2 Short 
 
-- Từ **java 7** ta có thể sử dụng `_` cho phân tách con số cho dễ nhìn nhưng lưu ý
-  - Không thể sử dụng `_` ở đầu hoặc ở cuối, ở cạnh `.`, cạnh `L,f` và cạnh `0x`
-- Vd `long value = 3_000_000_000L;`
+- Tiết kiệm bộ nhớ trong array lớn
+
+##### 3.1.1.3 Int 
+
+- Từ **Java 8** trở lên có thể sử dụng Unsigned **0** => **2^32^-1**
+
+##### 3.1.1.4 Long 
+
+- Từ **Java 8** trở lên có thể sử dụng Unsigned **0** => **2^64^-1**
+- Từ **java 7** ta có thể sử dụng **`_`** cho phân tách con số cho dễ nhìn nhưng lưu ý
+  - Không thể sử dụng **`_`** ở đầu hoặc ở cuối, ở cạnh **`.`**, cạnh **`L,f`** và cạnh **`0x`**
+- Vd **`long value = 3_000_000_000L;`**
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 #### 3.1.2 Floating point
 
-- Dấu phẩy động có 2 loại: `float, double`
-- 3 giá trị đặc biệt `positive infinity, negative infinity, NaN` với `NaN` không phải là **1 số**
+- Dấu phẩy động có 2 loại: **`float, double`**
+- 3 giá trị đặc biệt **`positive infinity, negative infinity, NaN`** với **`NaN`** không phải là **1 số**
 
 ```java
 float a = 3.5F; // bắt buộc phải có f hoặc F
@@ -131,20 +146,22 @@ float a = 3.5F; // bắt buộc phải có f hoặc F
 
 #### 3.1.3 Character
 
-- Ký tự có 1 loại: `char`
+- Ký tự có 1 loại: **`char`**
 - Mô tả đơn vị trong **bảng mã UTF-16**
 - Các escape thường dùng
-  - `\b` ==> backspace
-  - `\t` ==> tab
-  - `\n` ==> linefeed
-  - `\r` ==> carriage return
-  - `\"` ==> double quote
-  - `\'` ==> single quote
-  - `\\` ==> backslash
+  - **`\b`** ==> backspace
+  - **`\t`** ==> tab
+  - **`\n`** ==> linefeed
+  - **`\r`** ==> carriage return
+  - **`\"`** ==> double quote
+  - **`\'`** ==> single quote
+  - **`\\`** ==> backslash
 
 #### 3.1.4 Boolean
 
-- Boolean có 1 loại: `boolean`
+- Boolean có 1 loại: **`boolean`**
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 3.2 Reference
 
