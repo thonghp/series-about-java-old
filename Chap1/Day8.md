@@ -1,17 +1,25 @@
-# Array  
+# Array
 
 ## Mục lục nội dung
 
-  - [1. Array](#1-array)
-  - [2. One dimentional](#2-one-dimentional)
-    - [2.1 Sao chép trong mảng 1 chiều](#21-sao-chép-trong-mảng-1-chiều)
-    - [2.2 Arrays.sort() và Arrays.toString trong mảng](#22-arrayssort-và-arraystostring-trong-mảng)
-    - [2.3 Chèn phần tử vào trong mảng](#23-chèn-phần-tử-vào-trong-mảng)
-    - [2.4 Đếm số lần xuất hiện của từng phần tử](#24-đếm-số-lần-xuất-hiện-của-từng-phần-tử)
-    - [2.5 In tất cả phần tử nếu trùng lặp thì in 1 lần](#25-in-tất-cả-phần-tử-nếu-trùng-lặp-thì-in-1-lần)
-    - [2.6 Arrays.equals()](#26-arraysequals)
-  - [3. Two dimentional](#3-two-dimentional)
-    - [3.1 Arrays.deepEquals() để so sánh 2 matrix](#31-arraysdeepequals-để-so-sánh-2-matrix)
+- [1. Array](#1-array)
+- [2. One dimentional](#2-one-dimentional)
+  - [2.1 Khai báo](#21-khai-báo)
+  - [2.2 Khởi tạo](#22-khởi-tạo)
+  - [2.3 Duyệt mảng](#23-duyệt-mảng)
+  - [2.4 Note](#24-note)
+  - [2.5 Sao chép trong mảng 1 chiều](#25-sao-chép-trong-mảng-1-chiều)
+  - [2.6 sort và toString trong Arrays](#26-sort-và-tostring-trong-arrays)
+  - [2.7 Chèn phần tử vào trong mảng](#27-chèn-phần-tử-vào-trong-mảng)
+  - [2.8 Đếm số lần xuất hiện của từng phần tử](#28-đếm-số-lần-xuất-hiện-của-từng-phần-tử)
+  - [2.9 In tất cả phần tử nếu trùng lặp thì in 1 lần](#29-in-tất-cả-phần-tử-nếu-trùng-lặp-thì-in-1-lần)
+  - [2.10 Arrays.equals()](#210-arraysequals)
+- [3. Two dimentional](#3-two-dimentional)
+  - [3.1 Khởi tạo](#31-khởi-tạo)
+  - [3.2 Duyệt mảng](#32-duyệt-mảng)
+  - [3.3 Ragged](#33-ragged)
+  - [3.4 clone](#34-clone)
+  - [3.5 Arrays.deepEquals() để so sánh 2 matrix](#35-arraysdeepequals-để-so-sánh-2-matrix)
 
 ## 1. Array
 
@@ -33,17 +41,17 @@
 
 ```java
 // declare
-int[] array; // c1 
+int[] array; // c1
 int []array; // c2
 int array[]; // c3
 ```
 
 ### 2.2 Khởi tạo
 
-- Có 2 dạng khởi tạo giá trị: 
+- Có 2 dạng khởi tạo giá trị:
 
 ```java
-// initialize 
+// initialize
 Object[] array = new Object[2]; // [null, null]
 int[] array = new int[2]; // [0, 0]
 array[1] = 1;
@@ -54,25 +62,25 @@ String[] name = {"thong","thai"}; // c1 sử dụng chủ yếu
 int[] integer = new int[]{1,2,3}; // c2
 
 // truy cập element
-System.out.println(integer[0]); // 1 
+System.out.println(integer[0]); // 1
 ```
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
-### 2.3 Duyệt mảng 
+### 2.3 Duyệt mảng
 
 - Có 2 dạng duyệt qua mảng là **`for`** và **`for-each`**
 
 ```java
-int[] integer = {1,2,3}; 
+int[] integer = {1,2,3};
 for (int i = 0; i < integer.length; i++) {
-  System.out.println(integer[i]); // 1 2 3 
+  System.out.println(integer[i]); // 1 2 3
 }
 
 // lưu ý i sẽ cùng datatype vs integer
 for (int i : integer) { // duyệt qua mỗi i trong integer
   System.out.println(i); // 1 2 3
-} 
+}
 
 // lưu ý array trong char không cần duyệt for để lấy value
 char[] city = {'t', 'p', 'h', 'c', 'm'};
@@ -82,16 +90,21 @@ System.out.println(city); // tphcm
 > - **for-each** chỉ duyệt qua các phần tử của array không phải các giá trị index
 > - chỉ nên sử dụng **for-each** để duyệt mảng hoặc tính toán đơn giản không nên sử dụng trong điều kiện
 
-### 2.4 Note 
+### 2.4 Note
 
 ```java
 // Array có length = 0 sẽ khác mảng null
-int[] empty = new int[0]; 
-int[] empty = new int[]{}; 
+int[] empty = new int[0];
+int[] empty = new int[]{};
 int[] arrayNull = null;
 
 int[] a,b // a, b là mảng
 int a[],b // a là mảng, b là int
+
+// vượt quá phạm vi => ném lỗi ArrayIndexOutOfBoundsException
+int[] arr = {1,2,3};
+System.out.println(arr[3]); // ArrayIndexOutOfBoundsException
+System.out.println(arr[-1]); // ArrayIndexOutOfBoundsException
 ```
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
@@ -100,41 +113,37 @@ int a[],b // a là mảng, b là int
 
 ```java
 /*
- * tất cả sao chép ở dưới đều != array gốc vì nó khác reference khi sao chép ra
- * khi ta muốn sao chép hoàn toàn 1 mảng ta nên sử dụng clone
  * khi ta muốn sao chép từ đầu đến 1 độ dài chỉ định sử dụng copyOf
  * khi ta muốn sao chép từ 1 vị trí bất kỳ đến 1 vị trí bất kỳ thì ta sử dụng system.arraycopy hoặc arrays.copyOfRange
  */
 
-private static void clone(int[] array) {
-    System.out.println("sao chép y chang từ đầu đến cuối");
-    int[] arrClone = array.clone();
-    System.out.println(Arrays.toString(arrClone));
-}
+int[] arr = {1, 2, 3, 4, 5};
 
-private static void systemArrayCopy(int[] array) {
-    System.out.println("chỉ định vị trí bắt đầu đến vị trí kết thúc");
-    int[] arrayCopy = new int[array.length];
-    // copy từ vị trí 0 của array vào vị trí 0 của arrayCopy vs độ dài của đoạn copy = vs length
-    System.arraycopy(array, 0, arrayCopy, 0, array.length);
-    System.out.println(Arrays.toString(arrayCopy));
-}
+// sao chép y chang
+int[] arrClone = array.clone(); // [1, 2, 3, 4, 5]
 
-public static void arraysCopyOf(int[] array) {
-    System.out.println("chỉ có thể copy từ vị trí 0 đến chỉ định");
-    int[] copyOf = Arrays.copyOf(array, array.length);
-    System.out.println(Arrays.toString(copyOf));
-}
+/*
+ * copy từ vị trí chỉ định đến array.length - 1 của mảng gốc
+ * vào array mới theo vị trí chỉ định 
+ * điều kiện tiên quyết phải tạo một mảng mới
+ */
+int[] arrCopy = new int[3];
+/*
+ * lấy element từ vị trí (2 -> arr.length-1) [3, 4 ,5]
+ * copy vào vị trí 1 -> 2 của arrCopy [0, 0, 0]
+ * arrCopy [0, 3, 4]
+ */
+System.arraycopy(arr, 3, arrCopy, 1, 2);
 
-public static void arraysCopyOfRange(int[] array) {
-    System.out.println("chỉ định ví trí copy và vị trí kết thúc");
-    int[] copyOfRange = Arrays.copyOfRange(array, 2, 6);
-    System.out.println(Arrays.toString(copyOfRange));
+// copy từ vị trí 0 và đến newLength
+int[] arrCopyOf = Arrays.copyOf(arr, 2); // [1, 2]
 
-    // ngoài ra ta còn có thể mở rộng array khi copy
-    int[] copyOfRange = Arrays.copyOfRange(array, 2, array.length+3);
-}
+// copy từ theo vị trí chỉ định có thể mở rộng mảng
+// [3, 4, 5, 0, 0, 0]
+int[] arrCopyOfRange = Arrays.copyOfRange(arr, 2, 8); 
 ```
+
+> Tất cả cách trên đều khác reference với mảng gốc
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
@@ -150,7 +159,7 @@ public static void arraysSort(int[] array) {
 }
 ```
 
-### 2.7 Chèn phần tử vào trong mảng 
+### 2.7 Chèn phần tử vào trong mảng
 
 ```java
 public static int[] insertElement(int index, int[] arr, int value) {
@@ -174,9 +183,9 @@ public static int[] insertElement(int index, int[] arr, int value) {
 Phân tích bài toán: ở bài toán này sẽ thực hiện 2 bước
 
 - Bước 1 là đếm số lượng
-    - Tạo một mảng để lưu số lượng
+  - Tạo một mảng để lưu số lượng
 - Bước 2 là phần tử nào trùng không đếm nữa
-    - Sẽ gán nó bằng một giá trị gì đó để khi tới ô đó nó ko đếm dc
+  - Sẽ gán nó bằng một giá trị gì đó để khi tới ô đó nó ko đếm dc
 
 ```java
 int[] arr = new int[]{1, 2, 8, 3, 2, 2, 2, 5, 1};
@@ -194,10 +203,10 @@ for (int i = 0; i < arr.length; i++) {
         fr[i] = count;
 }
 
-// fr = {2,4,1,1,-1,-1,-1,1,-1}    
+// fr = {2,4,1,1,-1,-1,-1,1,-1}
 for (int i = 0; i < fr.length; i++) {
     if (fr[i] != visited) // những vị trí = -1 (là những vị trí trùng ko hiển thị)
-        System.out.println("    " + arr[i] + "    |    " + fr[i]); 
+        System.out.println("    " + arr[i] + "    |    " + fr[i]);
 }
 ```
 
@@ -216,21 +225,21 @@ public static int removeDuplicateElements(int arr[], int n) {
     // {10, 20, 20, 30, 30, 40, 50, 50};
 
     int[] temp = new int[n];
-         
+
     int j = 0;
     for (int i=0; i<n-1; i++)
         if (arr[i] != arr[i+1])
             temp[j++] = arr[i];
-    
+
     // [10, 20, 30, 40, 0, 0, 0, 0]
 
-    temp[j++] = arr[n-1]; 
-    // [10, 20, 30, 40, 50, 0, 0, 0] 
-     
+    temp[j++] = arr[n-1];
+    // [10, 20, 30, 40, 50, 0, 0, 0]
+
     // Modify original array
     for (int i=0; i<j; i++)
         arr[i] = temp[i];
-    
+
     return j; // 5
 }
 ```
@@ -251,7 +260,7 @@ Một số method có sẵn thường dùng nằm trong Arrays API => **asList()
 
 ## 3. Two dimentional
 
-### 3.1 Khởi tạo 
+### 3.1 Khởi tạo
 
 Ma trận mxn với m là hàng và n là cột
 
@@ -262,7 +271,7 @@ int [][]matrix; // c2
 int matrix[][]; // c3
 int []matrix[]; // c4
 
-// initialize 
+// initialize
 int[][] matrix;
 matrix = new int[2][2];
 matrix[0][0] = 1;
@@ -283,9 +292,9 @@ System.out.println(matrix[1][0]); // in ra vị trí ở hàng 1 cột 0 là 3
 ```java
 for (int i = 0; i < matrix.length; i++) {
   for (int j = 0; j < matrix[i].length; j++) {
-      System.out.print(matrix[i][j]+" "); 
+      System.out.print(matrix[i][j]+" ");
   }
-  System.out.println(); 
+  System.out.println();
 }
 
 for (int[] row : matrix) {
@@ -296,7 +305,7 @@ for (int[] row : matrix) {
 }
 ```
 
-### 3.3 Ragged 
+### 3.3 Ragged
 
 ```java
 // ragged array là chỉ định cột cho từng hàng,
@@ -314,22 +323,22 @@ for (int i = 0; i < jagged.length; i++) {
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
-### 3.4 clone 
+### 3.4 clone
 
 ```java
 // clone matrix sẽ khác array là nó chỉ tạo mảng mới duy nhất còn mảng con sẽ share với nhau
 int intArray[][] = {{1,2,3},{4,5}};
 int cloneArray[][] = intArray.clone();
-          
+
 // khác reference
 System.out.println(intArray == cloneArray); // false
-          
+
 // will print true, do các mảng con sẽ share với nhau
 System.out.println(intArray[0] == cloneArray[0]);
 System.out.println(intArray[1] == cloneArray[0]);
 ```
 
-### 3.5 Arrays.deepEquals() để so sánh 2 matrix 
+### 3.5 Arrays.deepEquals() để so sánh 2 matrix
 
 ```java
 int[][] a1 = {{2, 4}, {4, 6}, {8, 10}};
