@@ -207,6 +207,10 @@ for (int i = 0; i < 5; i++) {
 int i;
 for (i = 0; i < 5; i++) {}
 System.out.println(i); // 5
+
+for (;;) {
+// for vô hạn
+}
 ```
 
 ### 2.4 for - each
