@@ -89,6 +89,8 @@ System.out.println(str.substring(2)); // ong thai
 System.out.println(str.substring(2,9)); // ong tha
 ```
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 3.4 Nối chuỗi
 
 Trả về chuỗi sau khi nối, ta có 2 cách nối.
@@ -123,6 +125,8 @@ System.out.println(str.indexOf('a')); // 13
 System.out.println(str.indexOf('a',14)); // 19
 ```
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 3.6 lastIndexOf()
 
 Trả về index của text được chỉ định **xuất hiện lần cuối cùng**, bắt đầu từ 0 và không có thì trả về -1.
@@ -154,6 +158,8 @@ System.out.println(str1.equals(str2)); // true
 
 > Ngoài ra ta có thể sử dụng `equalsIgnoreCase()` để khi so sánh không phân biệt chữ hoa hay chữ thường
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 3.8 equals() và == trong String
 
 - `==` được sử dụng để so sánh tham chiếu (so sánh địa chỉ), kiếm tra xem cả 2 object có cùng trỏ đến cùng 1 vị trí bộ nhớ.
@@ -178,6 +184,8 @@ System.out.println(str4.equals("")); // exception
 
 > khi ta gán str1 += "a" và str2 += "a" lúc này sẽ trả về false do lúc này nó đã thay đổi string literal dẫn đến không xác định được refer
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 3.9 compareTo() 
 
 So sánh giữa 2 ký tự unicode.
@@ -197,9 +205,10 @@ System.out.println(str1.compareTo(str5)); // -3
 System.out.println(str1.compareTo(null)); // exception
 ```
 
-> Ngoài ra ta có thể sử dụng `compareToIgnoreCase()` để khi so sánh không phân biệt chữ hoa hay chữ thường
-
+> - Ngoài ra ta có thể sử dụng **compareToIgnoreCase()** để khi so sánh không phân biệt chữ hoa hay chữ thường
 > Nên sử dụng `equals()` trong so sánh giá trị, `compareTo()` trong sắp xếp và `==` trong reference.
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 3.10 toLowerCase() và toUpperCase()
 
@@ -231,6 +240,8 @@ System.out.println(str.replace('l', 'p')); // Heppo
 System.out.println(str.replace("lo", "de")); // Helde
 ```
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 3.13 startsWith() và endsWith()
 
 `startsWith()` kiểm tra xem có phải bắt đầu bằng String chỉ định không.
@@ -255,6 +266,8 @@ System.out.println(str.endsWith("hn")); // true
 // String java luôn kết thúc là "" ở phía sau
 System.out.println(str.endsWith("")); // true
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 3.14 contains()
 
@@ -287,6 +300,8 @@ System.out.println(str1 + "\t" + str2); // thong  thai
 // \f dùng cho ngắt trang
 System.out.println("\t" + "\r" + str2); // thai (nhảy về đầu dòng)
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 3.16 Ép kiểu
 
@@ -327,6 +342,8 @@ limit = str.split("[+-]"); // [1, _2, _3, _4]
 
 > lưu ý `\\s` đại diện cho space nhưng trường hợp có nhiều space thì nó vẫn giữ lại nếu ta chỉ split 1 space, để giải quyết điều này thì sử dụng `\\s+` để split hết tất cả space.
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 3.18 Gán String vào char 
 
 ```java
@@ -356,6 +373,8 @@ System.out.println(it2==it4); // true
 String all = String.join(" / ", "S", "M", "L", "XL");
 ```
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 3.21 repeat()
 
 Áp dụng cho java 11 trở lên 
@@ -369,8 +388,6 @@ String repeated = "Java".repeat(3); // JavaJavaJava
 - Một chuỗi gọi là empty khi nó `str.equals("")` ra true hay `str.length()==0`
 - Kiểm tra chuỗi không trống và khác null thì điều kiện khác null phải viết trước 
   - `if (str != null && str.length() != 0)`
-
-**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**  
   
 ## 4. Character 
 

@@ -22,6 +22,8 @@
 
 ![50 keyword](/assets/50-keyword.jpg)
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 1.1 Các trường hợp đặt tên  
 
 - Viết hoa đầu mỗi cụm từ **==>** **Vd: HelloWorld**
@@ -66,6 +68,8 @@ var salary = 3.5; // double
 var age = 22; // int
 ```
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 2.1 Scope
 
 ![variable scope](/assets/variable-scope.jpg)
@@ -96,6 +100,8 @@ class MyClass {
 
 > **không thể** sử dụng từ khoá **static** trong **khai báo biến ở method** vì **scope nó chỉ có thể là lớp**
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 2.3 Instance variable
 
 - Còn gọi là **Non-Static Field, Member variable**
@@ -111,6 +117,8 @@ class MyClass {
   private int number; // instance variable
 }
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 2.4 Local variable
 

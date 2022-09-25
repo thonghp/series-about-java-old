@@ -31,6 +31,8 @@
 `** ==> 3 ngôi
 - Toán tử gồm **Arithmetic (số học), Assignment, Unary, Relational, Logical, Ternary, Bitwise, Shift, Type Comparison**.
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 1.1 Arithmetic
 
 - Toán tử Arithmetic gồm **`+`, `-`, `*`, `/`, `%`**.
@@ -238,6 +240,8 @@ result = result >>> 2;
 
 > Đối với toán tử **>>>** không thể lấy lại các bit bị mất
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 1.9 Instance of
 
 - Toán tử Type Comparison gồm `instance of`
@@ -299,6 +303,8 @@ System.out.println(a); // 11
 if(++a==10 & ++a==12) {}
 System.out.println(a); // 12
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 1.11 Thứ tự ưu tiên trong operator
 

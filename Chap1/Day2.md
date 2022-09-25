@@ -39,6 +39,8 @@ public class DemoJavaProgram {
 - Phương thức **`main`** để thực thi chương trình
 - **`System.out.println`** ==> gọi method **`println`** của object **`System.out`** và in ra màn hình console
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ## 2. Comment
 
 - **`\\`** comment với nội dung ngắn và chỉ trên 1 dòng.
@@ -143,6 +145,8 @@ float a = 3.5F; // bắt buộc phải có f hoặc F
 ```
 
 > Không thích hợp trong tính toán tài chính vì nó không làm tròn. Vd 2.0 - 1.1 ra 0.8999999... chứ không phải là 0.9 muốn chính xác thì dùng **BigDecimal**
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 #### 3.1.3 Character
 

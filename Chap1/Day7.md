@@ -138,6 +138,8 @@ System.out.println(i); // 5
 
 > Sử dụng **while(true) - vòng lặp vô hạn** cho trường hợp điều kiện chưa biết trước.
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 2.2 do - while
 
 - Sử dụng khi số lần lặp không xác định
@@ -213,6 +215,8 @@ for (;;) {
 }
 ```
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ### 2.4 for - each
 
 Được thế kế để lặp qua array và collection
@@ -257,6 +261,8 @@ expression chỉ có thể là
 - byte, short, int, char (wrapper tương ứng)
 - enum
 - String
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 3.1 switch truyền thống
 
@@ -399,6 +405,8 @@ for (out = 0; out < 10; out++) {
 // chỉ in câu này 0 - 11
 System.out.println("outer out = " + out + ", in = " + in);
 ```
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 4.2 continue
 
