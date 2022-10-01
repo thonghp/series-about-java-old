@@ -110,6 +110,7 @@ System.out.println(b++); // 6
 System.out.println(b); // 7
 System.out.println(+b); // 7
 System.out.println(-b); // -7
+System.out.println(--a--); // lỗi kể cả bỏ trong ()
 ```
 
 > **++** áp dụng với **char** sẽ ra ký tự tiếp theo
