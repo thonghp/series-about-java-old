@@ -20,17 +20,16 @@ Series độc quyền về các chủ đề liên quan tới java
 
 ## Tác giả
 
-- [Thong Hoang][thonghp]
+- [Thong Hoang](https://github.com/thonghp)
 
-[chap1]: Chap1/Day0.md
-[chap2]: Chap2/Day0.md
-[chap3]: Chap3/Day0.md
-[chap4]: Chap4/Day0.md
-[chap5]: Chap5/Day0.md
-[chap6]: Chap6/Day0.md
-[chap7]: Chap7/Day0.md
-[chap8]: Chap8/Day0.md
-[chap9]: Chap9/Day0.md
-[chap10]: Chap10/Day0.md
-[chap11]: Chap11/Day0.md
-[thonghp]: https://github.com/thonghp
+[chap1]: Chap1/Day.md
+[chap2]: Chap2/Day.md
+[chap3]: Chap3/Day.md
+[chap4]: Chap4/Day.md
+[chap5]: Chap5/Day.md
+[chap6]: Chap6/Day.md
+[chap7]: Chap7/Day.md
+[chap8]: Chap8/Day.md
+[chap9]: Chap9/Day.md
+[chap10]: Chap10/Day.md
+[chap11]: Chap11/Day.md
