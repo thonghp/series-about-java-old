@@ -1,8 +1,11 @@
 # Các Ngôn Ngữ Lập Trình
 
+## Mục lục nội dung
+
 - [1. Java](#1-java)
 - [2. Java với C và C++](#2-java-với-c-và-c)
 - [3. Java với Javascript](#3-java-với-javascript)
+- [4. Java với Python](#4-java-với-python)
 
 ## 1. Java
 
@@ -17,6 +20,8 @@
 - Chạy chậm hơn, tiêu tốn một lượng bộ nhớ đáng kể
 - Ngôn ngữ tĩnh (phiên bản trước)
   - Khai báo kiểu dữ liệu trước khi sử dụng
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ## 2. Java với C và C++
 
@@ -33,6 +38,8 @@
 | Ko hỗ trợ xử lý ngoại lệ            | Hỗ trợ xử lý ngoại lệ      | Hỗ trợ xử lý ngoại lệ    |
 | Ko hỗ trợ constructor và destructor | Hỗ trợ cả 2                | Chỉ hỗ trợ constructor   |
 
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
 ## 3. Java với Javascript
 
 | Java                                                 | Javascript                                 |
@@ -41,6 +48,24 @@
 | Oop                                                  | Object-Based                               |
 | Độc lập                                              | Tích hợp vào html để thực thi              |
 | Strongly typed phải chọn datatype khi declare và use | Loosely typed ko quan tâm datatype declare |
-| Compiled trước khi thực thi                          | Tích hợp vào html để thực thi              |
+| Compiled trên server trước khi thực thi trên client  | Được client interpreted                    |
 | Thục hiện task phức tạp = cách sử dụng multithread   | Không thể thực hiện task phức tạp          |
 | Yêu cầu một lượng lớn memory                         | Không yêu cầu một lượng lớn memory         |
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
+## 4. Java với Python
+
+| Java                                        | Python                                  |
+| ------------------------------------------- | --------------------------------------- |
+| Ngôn ngữ compiled + interpreted             | Ngôn ngữ interpreted                    |
+| Oop                                         | Oop high-level                          |
+| Hỗ trợ đơn kế thừa + đa kế thừa (interface) | Hỗ trợ đơn kế thừa + đa kế thừa         |
+| Chạy trên thiết bị có thể chạy JVM          | Cần 1 interpreter được cài đặt trên máy |
+| Chương trình chạy nhanh hơn Python          | Chương trình chạy chậm hơn Java         |
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
+## Xem thêm bài viết khác
+
+- [White Paper - Kiến Trúc - Các Nền Tảng](/Chap1/Day1.md)

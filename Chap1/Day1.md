@@ -57,4 +57,5 @@ Giải thích những lợi ích 1 công nghệ, sản phẩm hay chính sách c
 
 ## Xem thêm bài viết khác
 
+- [Các Ngôn Ngữ Lập Trình](/Chap1/Day.md)
 - [Simple Java Program - Comment - Datatype](/Chap1/Day2.md)
