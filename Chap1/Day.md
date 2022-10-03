@@ -1,71 +1,55 @@
-# Các Ngôn Ngữ Lập Trình
+# Structure
 
-## Mục lục nội dung
+## Các bài viết
 
-- [1. Java](#1-java)
-- [2. Java với C và C++](#2-java-với-c-và-c)
-- [3. Java với Javascript](#3-java-với-javascript)
-- [4. Java với Python](#4-java-với-python)
+| Bài viết                                                              | Link          |
+| --------------------------------------------------------------------- | ------------- |
+| Day : Các Ngôn Ngữ Lập Trình                                          | [Link][day]   |
+| Day 1: White Paper - Kiến Trúc - Các Nền Tảng                         | [Link][day1]  |
+| Day 2: Simple Java Program - Comment - Datatype                       | [Link][day2]  |
+| Day 3: Naming Convention - Variable - Constant                        | [Link][day3]  |
+| Day 4: Operator - Math - Type Conversion                              | [Link][day4]  |
+| Day 5: String - Character                                             | [Link][day5]  |
+| Day 6: Scanner Input - Format                                         | [Link][day6]  |
+| Day 7: Control Flow                                                   | [Link][day7]  |
+| Day 8: Array                                                          | [Link][day8]  |
+| Day 9: Pass by value - reference - Final - Scope                      | [Link][day9]  |
+| Day 10: Oop - Object & Class - Access Modifier - Class Access - Final | [Link][day10] |
+| Day 11: Constructor - This                                            | [Link][day11] |
+| Day 12: Encapsulation & Inheritance                                   | [Link][day12] |
+| Day 13: Abstract & Anonymous                                          | [Link][day13] |
+| Day 14: Interface                                                     | [Link][day14] |
+| Day 15: Static                                                        | [Link][day15] |
+| Day 16: Overview Collections Framework & List                         | [Link][day16] |
+| Day 17: Set                                                           | [Link][day17] |
+| Day 18: Map                                                           | [Link][day18] |
+| Day 19: Collections                                                   | [Link][day19] |
+| Day 20: Wrapper                                                       | [Link][day20] |
+| Day 21: Comparable & Comparator                                       | [Link][day21] |
+| Day 22: Stack & Deque                                                 | [Link][day22] |
+| Day 23: Lambda                                                        | [Link][day23] |
 
-## 1. Java
-
-- Là ngôn ngữ biên dịch - **compiled language**
-  - **Viết code => chạy code thông qua compiler => tạo bytecode => bytecode chạy trong JVM**
-- Syntax **tương tự** C, C++
-- Ngôn ngữ **đa luồng**
-- **Ngang bằng hoặc nhanh hơn** hầu hết ngôn ngữ biên dịch và **nhanh hơn nhiều** so với ngôn ngữ thông dịch
-- Không phụ thuộc vào nền tảng
-- Ít tính năng cấp thấp do được **`jvm`** và **`compiler`** xư lý tự động
-- Sử dụng **`garbage collector`** để quản lý memory
-- Chạy chậm hơn, tiêu tốn một lượng bộ nhớ đáng kể
-- Ngôn ngữ tĩnh (phiên bản trước)
-  - Khai báo kiểu dữ liệu trước khi sử dụng
-
-**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
-
-## 2. Java với C và C++
-
-| C                                   | C++                        | Java                     |
-| ----------------------------------- | -------------------------- | ------------------------ |
-| Procedural language                 | Oop                        | Oop chưa 100%            |
-| Dựa trên assembly                   | Dựa trên C                 | Dựa trên C/C++           |
-| Chỉ Compiler                        | Chỉ Compiler               | (Compiler + interpreter) |
-| Thực thi trực tiếp                  | Thực thi trực tiếp         | Thực thi bới JVM         |
-| Tiếp cận theo Top-down              | Tiếp cận theo Bottom-up    | Tiếp cận theo Bottom-up  |
-| Ko hỗ trợ kết nối database          | Ko hỗ trợ kết nối database | Hỗ trợ kết nối database  |
-| Hỗ trợ con trỏ                      | Hỗ trợ con trỏ             | Ko hỗ trợ con trỏ        |
-| Ko hỗ trợ kế thừa                   | Hỗ trợ kế thừa             | Hỗ trợ kế thừa (ko đa)   |
-| Ko hỗ trợ xử lý ngoại lệ            | Hỗ trợ xử lý ngoại lệ      | Hỗ trợ xử lý ngoại lệ    |
-| Ko hỗ trợ constructor và destructor | Hỗ trợ cả 2                | Chỉ hỗ trợ constructor   |
-
-**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
-
-## 3. Java với Javascript
-
-| Java                                                 | Javascript                                 |
-| ---------------------------------------------------- | ------------------------------------------ |
-| Ngôn ngữ lập trình                                   | Ngôn ngữ script                            |
-| Oop                                                  | Object-Based                               |
-| Độc lập                                              | Tích hợp vào html để thực thi              |
-| Strongly typed phải chọn datatype khi declare và use | Loosely typed ko quan tâm datatype declare |
-| Compiled trên server trước khi thực thi trên client  | Được client interpreted                    |
-| Thục hiện task phức tạp = cách sử dụng multithread   | Không thể thực hiện task phức tạp          |
-| Yêu cầu một lượng lớn memory                         | Không yêu cầu một lượng lớn memory         |
-
-**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
-
-## 4. Java với Python
-
-| Java                                        | Python                                  |
-| ------------------------------------------- | --------------------------------------- |
-| Ngôn ngữ compiled + interpreted             | Ngôn ngữ interpreted                    |
-| Oop                                         | Oop high-level                          |
-| Hỗ trợ đơn kế thừa + đa kế thừa (interface) | Hỗ trợ đơn kế thừa + đa kế thừa         |
-| Chạy trên thiết bị có thể chạy JVM          | Cần 1 interpreter được cài đặt trên máy |
-| Chương trình chạy nhanh hơn Python          | Chương trình chạy chậm hơn Java         |
-
-**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
-
-## Xem thêm bài viết khác
-
-- [White Paper - Kiến Trúc - Các Nền Tảng](/Chap1/Day1.md)
+[day]: Day.md
+[day1]: Day1.md
+[day2]: Day2.md
+[day3]: Day3.md
+[day4]: Day4.md
+[day5]: Day5.md
+[day6]: Day6.md
+[day7]: Day7.md
+[day8]: Day8.md
+[day9]: Day9.md
+[day10]: Day010.md
+[day11]: Day011.md
+[day12]: Day012.md
+[day13]: Day013.md
+[day14]: Day014.md
+[day15]: Day015.md
+[day16]: Day016.md
+[day17]: Day017.md
+[day18]: Day018.md
+[day19]: Day019.md
+[day20]: Day020.md
+[day21]: Day021.md
+[day22]: Day022.md
+[day23]: Day023.md
