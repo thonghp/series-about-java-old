@@ -6,6 +6,7 @@
 - [2. Java với C và C++](#2-java-với-c-và-c)
 - [3. Java với Javascript](#3-java-với-javascript)
 - [4. Java với Python](#4-java-với-python)
+- [5. Java với C#](#5-java-với-c)
 
 ## 1. Java
 
@@ -63,6 +64,18 @@
 | Hỗ trợ đơn kế thừa + đa kế thừa (interface) | Hỗ trợ đơn kế thừa + đa kế thừa         |
 | Chạy trên thiết bị có thể chạy JVM          | Cần 1 interpreter được cài đặt trên máy |
 | Chương trình chạy nhanh hơn Python          | Chương trình chạy chậm hơn Java         |
+
+**[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
+
+## 5. Java với C#
+
+| Java                                 | C#                                                                 |
+| ------------------------------------ | ------------------------------------------------------------------ |
+| Checked và Unchecked exception       | Checked exception                                                  |
+| type safety là safe                  | type safety là unsafe                                              |
+| Không hỗ trợ câu lệnh goto           | Hỗ trợ câu lệnh goto                                               |
+| Không hỗ trợ structure và union      | Hỗ trợ structure và union                                          |
+| Không hỗ trợ conditional compilation | Hỗ trợ conditional compilation = cách dùng preprocessor directives |
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 

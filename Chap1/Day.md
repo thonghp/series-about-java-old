@@ -4,7 +4,7 @@
 
 | Bài viết                                                              | Link          |
 | --------------------------------------------------------------------- | ------------- |
-| Day : Các Ngôn Ngữ Lập Trình                                          | [Link][day]   |
+| Day 0: Các Ngôn Ngữ Lập Trình                                         | [Link][day0]  |
 | Day 1: White Paper - Kiến Trúc - Các Nền Tảng                         | [Link][day1]  |
 | Day 2: Simple Java Program - Comment - Datatype                       | [Link][day2]  |
 | Day 3: Naming Convention - Variable - Constant                        | [Link][day3]  |
@@ -29,7 +29,7 @@
 | Day 22: Stack & Deque                                                 | [Link][day22] |
 | Day 23: Lambda                                                        | [Link][day23] |
 
-[day]: Day.md
+[day0]: Day0.md
 [day1]: Day1.md
 [day2]: Day2.md
 [day3]: Day3.md
