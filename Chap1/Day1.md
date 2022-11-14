@@ -10,14 +10,22 @@
 
 Giải thích những lợi ích 1 công nghệ, sản phẩm hay chính sách cụ thể và trong java được thể hiện thông qua 11 từ 
 
-- **Simple ==>** thiết kế **gần với c++**, bỏ qua tính năng ít dùng và khó hiểu 
-- **Object oriented ==>** Java không phải là ngôn ngữ thuần hướng đối tượng vì còn có **kiểu dữ liệu nguyên thủy** 
-- **Distributed ==>** có 1 thư viện phong phú để đối phó **tcp/ip** như **http và ftp**, có thể mở và truy cập các object trên mạng thông qua **url** 1 cách dễ dàng
-- **Robust ==>** kiểm tra lỗi runtime, mô hình con trỏ loại bỏ khả năng ghi đè bộ nhớ và làm hỏng dữ liệu
+- **Simple ==>** thiết kế **gần** với c++, **bỏ qua tính năng** ít dùng và khó hiểu 
+    - **Bỏ tính năng** pointer vì
+        - Dẫn đến sự **nhầm lẫn**
+        - **Phá vỡ chương trình** 1 cách dễ dàng
+            - Vd thêm 2 con trỏ chương trình sập ngay
+        - **Phá vỡ bảo mật** vì virus hay chương trình hack có thể được phát triển bằng cách sử dụng pointer.
+- **Object oriented ==>** Java là **ngôn ngữ oop thuần túy** vì chương trình java được phát triển bằng cách **sử dụng các class và object nhưng không thuần** vì còn có kiểu dữ liệu nguyên thủy
+- **Distributed ==>** hỗ trợ **môi trường phân tán** của Internet vì xử lý các giao thức **TCP/IP và UDP**
+- **Robust**
+    - **Xử lý ngoại lệ**, chương trinh sẽ không bị mất dữ liệu
+    - **Quản lý bộ nhớ mạnh mẽ**, hạn chế bị treo nếu không cấp đủ bộ nhớ do JVM quản lý 
+    - **Kiểm tra lỗi** biên dịch và runtime
 - **Secure ==>** những mã không đáng tin cậy sẽ được thực thi trong môi trường máy ảo sandbox không thể tác động đến hệ thống server.   
 - **Architecture-Neutral ==>** Trình biên dịch tạo ra các lệnh bytecode ko liên quan gì đến kiến trúc máy tính cụ thể mà được thiết kế để thực thi mọi máy
-- **Portable ==>** Các kiểu dữ liệu nguyên thuỷ có kích thước cố định 
-- **Interpreted ==>** có thể thực thi các mã byte java trực tiếp trên bất kỳ máy nào 
+- **Portable ==>** Có thể chạy bytecode trên bất kỳ phần cứng nào có JVM
+- **Interpreted ==>** có thể thực thi các mã byte java trực tiếp trên bất kỳ máy nào nhờ interpreted
 - **High-Performance ==>** nhanh hơn ngôn ngữ lập trình thông dịch (**PHP, Ruby, Js, Python**) truyền thống vì bytecode gần với mã gốc nhưng vẫn chậm hơn ngôn ngữ được biên dịch (**C,C++,Go**)
     - Ngôn ngữ biên dịch được **chuyển đổi trực tiếp thành mã máy** mà bộ xử lý có thể thực thi, cho phép quản lý bộ nhớ, sử dụng cpu, khía cạnh phần cứng **==> cần xây dựng lại mỗi khi có thay đổi**
     - Ngôn ngữ thông dịch **chạy qua từng dòng chương trình và thực hiện từng lệnh** chậm hơn biên dịch nhưng hệ thống biên dịch đúng lúc nên cũng thu hẹp lại tốc độ **==>** Dễ tối ưu hơn
@@ -28,11 +36,15 @@ Giải thích những lợi ích 1 công nghệ, sản phẩm hay chính sách c
 
 ## 2. Kiến trúc
 
+- Tổng quan kiến trúc
+
+![java platform](/assets/java-platform.jpg)
+
+- Java Development Kit - **`JDK` = JRE + Development tools ==> là bộ công cụ phát triển** 
+
+> Ngôn ngữ khác thì **JDK** chính là **SDK**
+
 ![jdk](/assets/jdk.jpg)
-
-- Java Development Kit - `JDK` **==> bộ công cụ phát triển ==> JRE + Development/debugging tools**.
-
-> Ngôn ngữ khác thì jdk chính là sdk
 
 - Java Runtime Environment - `JRE` **==> JVM + Java Packages Classes(like util, math, lang, awt,swing etc) + runtime libraries ==>** Chạy chương trình java **đã biên dịch, không thể tạo chương trình mới**
     - Trên máy người dùng chỉ cần cài JRE là được
