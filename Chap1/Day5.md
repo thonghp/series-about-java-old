@@ -33,9 +33,9 @@
 
 - Là một array chứa các ký tự **không thể thay đổi - immutable** khi tạo. 
 - Ký tự sẽ bao gồm cả **khoảng trắng** và index bắt đầu như 1 array là 0.
-- Luôn bắt đầu và kết thúc `""` ở phía trước và phía sau `String` được tạo.
+- Luôn bắt đầu và kết thúc **`""`** ở phía trước và phía sau **`String`** được tạo.
 
-> Các thao tác với method của `String` khi String gán = null sẽ gây ra lỗi runtime.
+> Khi **String** được gán = **null**, lúc này các thao tác với method dành cho **String** sẽ gây ra lỗi **runtime**.
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
@@ -43,6 +43,7 @@
 
 ```java 
 String x = null; // trỏ vào vùng null
+String x = new String(null); // compile
 
 // tạo vùng object trong string
 String x = ""; // chuỗi rỗng
@@ -135,16 +136,16 @@ Trả về index của text được chỉ định **xuất hiện lần cuối 
 String str = "abcd dabe fabg";
 
 System.out.println(str.indexOf("ab")); // c1, return 11
-System.out.println(str.indexOf("ab",6)); // c2, return 6
+System.out.println(str.indexOf("ab", 6)); // c2, return 6
 
 // áp dụng cho char
 System.out.println(str.lastIndexOf('a')); // 11
-System.out.println(str.lastIndexOf('a',6)); // 6
+System.out.println(str.lastIndexOf('a', 6)); // 6
 ```
 
 ### 3.7 equals()
 
-Để so sánh ta có thể sử dụng `equals` trong `String`.
+Để so sánh ta có thể sử dụng **`equals`** trong **`String`**.
 
 ```java
 String str1 = "hello";
@@ -156,14 +157,14 @@ System.out.println(str1.equals(str2)); // true
  */
 ```
 
-> Ngoài ra ta có thể sử dụng `equalsIgnoreCase()` để khi so sánh không phân biệt chữ hoa hay chữ thường
+> Ngoài ra ta có thể sử dụng **`equalsIgnoreCase()`** để khi so sánh không phân biệt chữ hoa hay chữ thường
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
 ### 3.8 equals() và == trong String
 
-- `==` được sử dụng để so sánh tham chiếu (so sánh địa chỉ), kiếm tra xem cả 2 object có cùng trỏ đến cùng 1 vị trí bộ nhớ.
-- equals() để so sánh nội dung bên trong của 2 object. 
+- **`==`** được sử dụng để so sánh tham chiếu (so sánh địa chỉ), kiếm tra xem cả 2 object có cùng trỏ đến cùng 1 vị trí bộ nhớ.
+- **`equals()`** để so sánh nội dung bên trong của 2 object. 
 > Khi String gán cho 1 chuỗi thì ta có thể so sánh với **==** nhưng khi sử dụng **subString** hoặc **+** thì lúc này không thể so sánh với 1 chuỗi "" bằng toán tử **==**
 
 ```java
@@ -171,6 +172,8 @@ String str1 = "HELLO";
 String str2 = "HELLO";
 String str3 =  new String("HELLO"); // refer tới bộ nhớ heap
 String str4 = null;
+String str5 = "";
+String str6 = new String();
 System.out.println(str1 == str2); // true
 System.out.println(str1 == str3); // false
 System.out.println(str4 == null); // true
@@ -180,9 +183,12 @@ System.out.println(str1.equals(str3)); // true
 System.out.println(str4.equals(null)); // exception
 System.out.println(str1.equals(null)); // false
 System.out.println(str4.equals("")); // exception
+System.out.println(s5.equals(str6)); // true
+str1 += "WORLD";
+str2 += "WORLD";
+System.out.println(str1 == str2); // false
+// => thay đổi string literal dẫn đến không xác định được refer
 ```
-
-> khi ta gán str1 += "a" và str2 += "a" lúc này sẽ trả về false do lúc này nó đã thay đổi string literal dẫn đến không xác định được refer
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
@@ -206,7 +212,7 @@ System.out.println(str1.compareTo(null)); // exception
 ```
 
 > - Ngoài ra ta có thể sử dụng **compareToIgnoreCase()** để khi so sánh không phân biệt chữ hoa hay chữ thường
-> Nên sử dụng `equals()` trong so sánh giá trị, `compareTo()` trong sắp xếp và `==` trong reference.
+> - Nên sử dụng **equals()** trong so sánh giá trị, **compareTo()** trong sắp xếp và **==** trong reference.
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
@@ -250,7 +256,7 @@ System.out.println(str.replace("lo", "de")); // Helde
 String str = "John";
 System.out.println(str.startsWith("jo")); // false
 
-// String java luôn bắt đầu là "" ở phía trước
+// String java luôn bắt đầu là "" ở phía trước mặc dù có trim
 System.out.println(str.startsWith("")); // true
 
 // kiểm tra vị trí bắt đầu nhưng tính từ vị trí chỉ định
@@ -340,7 +346,7 @@ str = "1 + 2 - 3 + 4"
 limit = str.split("[+-]"); // [1, _2, _3, _4] 
 ```
 
-> lưu ý `\\s` đại diện cho space nhưng trường hợp có nhiều space thì nó vẫn giữ lại nếu ta chỉ split 1 space, để giải quyết điều này thì sử dụng `\\s+` để split hết tất cả space.
+> lưu ý **`\\s`** đại diện cho space nhưng trường hợp có nhiều space thì nó vẫn giữ lại nếu ta chỉ split 1 space, để giải quyết điều này thì sử dụng **`\\s+`** để split hết tất cả space.
 
 **[⬆ Quay trở lại đầu trang](#mục-lục-nội-dung)**
 
